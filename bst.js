@@ -80,6 +80,74 @@ function BinarySearchTree() {
     };
     return leftDepth - rightDepth;
   }
+
+  this.preOrder = function() {
+    var result = [];
+    var current = this.root;
+
+    function traverse(current) {
+      result.push(current.val);
+      if (current.left) {
+        traverse(current.left);
+      }
+      if (current.right) {
+        traverse(current.right);
+      }
+    }
+    traverse(current);
+    return result;
+  }
+
+  this.inOrder = function() {
+    var result = [];
+    var current = this.root;
+
+    function traverse(current) {
+      if (current.left) {
+        traverse(current.left);
+      }
+      result.push(current.val);
+      if (current.right) {
+        traverse(current.right);
+      }
+    }
+    traverse(current);  
+    return result;
+  }
+
+  this.postOrder = function() {
+    var result = [];
+    var current = this.root;
+
+    function traverse(current) {
+      if (current.left) {
+        traverse(current.left);
+      }
+      if (current.right) {
+        traverse(current.right);
+      }
+      result.push(current.val);
+    }
+    traverse(current);
+    return result;
+  }
+
+    this.breadthFirst = function() {
+    var queue = [this.root];
+    var result = [];
+
+    while(queue.length > 0) {
+      var node = queue.shift();
+      result.push(node.val);
+      if (node.left) {
+        queue.push(node.left);
+      };
+      if (node.right) {
+        queue.push(node.right);
+      };
+    }
+    return result;
+  }
 }
 
 function Node(val) {
@@ -99,4 +167,7 @@ console.log(bst.contains(8));
 console.log(bst.size());
 console.log(bst.depth());
 console.log(bst.balance());
-
+console.log(bst.preOrder());
+console.log(bst.inOrder());
+console.log(bst.postOrder());
+console.log(bst.breadthFirst());
