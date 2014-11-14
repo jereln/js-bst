@@ -36,4 +36,6 @@ After setting up the binary tree with traversals, this assignment was mostly tra
 
 ##Resources
 http://en.wikipedia.org/wiki/Tree_traversal  
-https://github.com/NickManos/data_structures_js
+https://github.com/NickManos/data_structures_js  
+https://github.com/ronaldporch/bst_javascript  
+https://github.com/cenkayberkin/js-data-structures-
