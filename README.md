@@ -35,4 +35,5 @@ return the values in the tree using breadth-first traversal.
 After setting up the binary tree with traversals, this assignment was mostly transcribing ruby into javascript. Most everything translated pretty easily over. Since I am still learning javascript, there were a few problems I ran into with syntax.
 
 ##Resources
-http://en.wikipedia.org/wiki/Tree_traversal
+http://en.wikipedia.org/wiki/Tree_traversal  
+https://github.com/NickManos/data_structures_js
